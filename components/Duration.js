@@ -11,13 +11,7 @@ const Duration = () => {
     { label: "Subtract", value: "sub" },
     { label: "Stop", value: "stop" },
   ]);
-  const [order, setOrder] = useState([
-    { label: "Name", value: "name" },
-    { label: "Date Modified", value: "date" },
-    { label: "Ascending", value: "ascending" },
-    { label: "Descending", value: "descending" },
-    { label: "More...", value: "more" },
-  ]);
+
   const [alarms, setAlarms] = useState([]);
   const openModal = () => {
     setOpen(!open);
@@ -72,25 +66,28 @@ const Duration = () => {
           alignItems: "center",
         }}
       >
-        <DropDownPicker
-          open={open}
-          value={value}
-          showArrowIcon={false}
-          items={items}
-          setOpen={setOpen}
-          setValue={setValue}
-          setItems={setItems}
-          placeholder="1hr:00:00"
-          style={{
-            borderWidth: 1.7,
-            borderColor: "black",
-            padding: 10,
-            backgroundColor: "#FDB8B8",
-            borderRadius: 8,
-            zIndex: 50,
-            width: 90,
-          }}
-        />
+        <TouchableOpacity
+          style={{ flexDirection: "row", alignItems: "center" }}
+        >
+          <DropDownPicker
+            open={open}
+            value={value}
+            showArrowIcon={true}
+            items={items}
+            setOpen={setOpen}
+            setValue={setValue}
+            setItems={setItems}
+            placeholder="1hr:00:00"
+            style={{
+              padding: 10,
+              borderRadius: 8,
+              zIndex: 50,
+              width: 120,
+              marginLeft: "20%",
+              marginTop: 3,
+            }}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

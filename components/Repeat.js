@@ -12,44 +12,42 @@ const Repeat = () => {
     { label: "Stop", value: "stop" },
   ]);
   const [order, setOrder] = useState([
-    { label: "daily", value: "Daily" },
-    { label: "ytuesday", value: "Weekly on Tuesday" },
-    { label: "lastTuesday", value: "Weekly On the Last Tuesday" },
-    { label: "july 26", value: "Annually on July 26" },
-    { label: "weekdays", value: "Every Weekday Monday To Friday" },
-    { label: "custom", value: "Custom" },
+    { value: "daily", label: "Daily" },
+    { value: "ytuesday", label: "Weekly on Tuesday" },
+    { value: "lastTuesday", label: "Weekly On the Last Tuesday" },
+    { value: "july 26", label: "Annually on July 26" },
+    { value: "weekdays", label: "Every Weekday Monday To Friday" },
+    { value: "custom", label: "Custom" },
   ]);
   return (
     <View
       style={{
-        Index: 50,
+        zIndex: 50,
         elevation: 3,
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      {/* <TouchableOpacity style={{ flexDirection: "row", alignItems: "center" }}> */}
-      <DropDownPicker
-        open={open}
-        value={value}
-        showArrowIcon={false}
-        items={order}
-        setOpen={setOpen}
-        setValue={setValue}
-        setItems={setOrder}
-        placeholder="1hr:00:00"
-        style={{
-          borderWidth: 1.7,
-          borderColor: "black",
-          padding: 10,
-          borderRadius: 8,
-          zIndex: 50,
-          width: 90,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      />
-      {/* </TouchableOpacity> */}
+      <TouchableOpacity style={{ flexDirection: "row", alignItems: "center" }}>
+        <DropDownPicker
+          open={open}
+          value={value}
+          showArrowIcon={true}
+          items={order}
+          setOpen={setOpen}
+          setValue={setValue}
+          setItems={setOrder}
+          placeholder="Does not repeat"
+          style={{
+            padding: 10,
+            borderRadius: 8,
+            zIndex: 50,
+            width: 200,
+            marginLeft: "20%",
+            marginTop: 3,
+          }}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
