@@ -19,14 +19,14 @@ export default class BottomNavigator extends Component {
         style={{
           flex: 1,
           flexDirection: "column",
-          backgroundColor: "grey",
+          backgroundColor: "white",
         }}
       >
         <View
           style={{
             position: "absolute",
             alignSelf: "center",
-            backgroundColor: "grey",
+            backgroundColor: "white",
             width: 70,
             height: 70,
             borderRadius: 35,
@@ -150,7 +150,7 @@ export default class BottomNavigator extends Component {
               />
             </TouchableOpacity>
             <Text style={{ justifyContent: "center", alignItems: "center" }}>
-              Notifications{" "}
+              Notifications
             </Text>
           </View>
           <View
@@ -174,7 +174,7 @@ export default class BottomNavigator extends Component {
               />
             </TouchableOpacity>
             <Text style={{ justifyContent: "center", alignItems: "center" }}>
-              Setting{" "}
+              Setting
             </Text>
           </View>
 
@@ -197,23 +197,15 @@ const styles = StyleSheet.create({
     height: 60,
     alignItems: "center",
     justifyContent: "center",
-    shadowColor: "grey",
-    shadowOpacity: 0.1,
-    shadowOffset: { x: 2, y: 0 },
-    shadowRadius: 2,
     borderRadius: 30,
     position: "absolute",
     bottom: 20,
     right: 0,
     top: 5,
     left: 5,
-    shadowOpacity: 5.0,
   },
   actionBtn: {
     backgroundColor: "#34A853",
-    textShadowOffset: { width: 5, height: 5 },
-    textShadowRadius: 10,
-    borderWidth: 2,
-    borderColor: "#fff",
+    padding: 20,
   },
 });

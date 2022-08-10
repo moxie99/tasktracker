@@ -12,9 +12,7 @@ import ViewOverflow from "react-native-view-overflow";
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView
-      style={{ backgroundColor: "white", height: "100%", zIndex: 0 }}
-    >
+    <SafeAreaView style={{ backgroundColor: "white" }}>
       {/* Header */}
       <Header />
       {/* App Title */}

@@ -6,11 +6,6 @@ import DropDownPicker from "react-native-dropdown-picker";
 const Repeat = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
-  const [items, setItems] = useState([
-    { label: "Add", value: "add" },
-    { label: "Subtract", value: "sub" },
-    { label: "Stop", value: "stop" },
-  ]);
   const [order, setOrder] = useState([
     { value: "daily", label: "Daily" },
     { value: "ytuesday", label: "Weekly on Tuesday" },

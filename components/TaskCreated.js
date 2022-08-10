@@ -10,6 +10,7 @@ import * as Icons from "react-native-heroicons/outline";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import DropDownPicker from "react-native-dropdown-picker";
+import { Dropdown } from "react-native-material-dropdown-v2";
 
 const TaskCreated = () => {
   const [open, setOpen] = useState(false);
@@ -62,7 +63,7 @@ const TaskCreated = () => {
             alignItems: "center",
           }}
         >
-          <DropDownPicker
+          {/* <DropDownPicker
             open={open}
             value={value}
             showArrowIcon={true}
@@ -77,7 +78,10 @@ const TaskCreated = () => {
               zIndex: 50,
               width: 90,
             }}
-          />
+          /> */}
+          <TouchableOpacity>
+            <Dropdown data={order} style={{ width: 200, height: 40 }} />
+          </TouchableOpacity>
         </View>
       </View>
       <View>
@@ -93,7 +97,7 @@ const TaskCreated = () => {
                   marginRight: "5%",
                   marginLeft: "5%",
                   borderRadius: 12,
-                  height: 49,
+                  height: 40,
                   width: "90%",
                   backgroundColor: item.bgColor,
                   marginBottom: "1%",
